@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Website</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,13 +25,11 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Header Section -->
-    <header class="bg-blue-800 text-white shadow-lg">
+    <header class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center">
             <a href="#" class="text-2xl sm:text-3xl font-bold rounded-lg px-2 py-1 hover:bg-blue-700 transition duration-300">
                 PAF-IAST
             </a>
-            <!-- Desktop Navigation -->
             <nav class="hidden sm:flex space-x-6 font-semibold">
                 <a href="#about" class="hover:text-gray-300 transition-colors duration-200">About Us</a>
                 <a href="#programs" class="hover:text-gray-300 transition-colors duration-200">Programs</a>
@@ -41,27 +37,23 @@
                 <a href="#faculty" class="hover:text-gray-300 transition-colors duration-200">Faculty</a>
                 <a href="#contact" class="hover:text-gray-300 transition-colors duration-200">Contact Us</a>
             </nav>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="sm:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
-        <!-- Mobile Navigation (hidden by default) -->
         <nav id="mobile-menu" class="hidden sm:hidden bg-blue-700 px-4 py-2">
-            <a href="#about" class="block py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200">About Us</a>
-            <a href="#programs" class="block py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200">Programs</a>
-            <a href="#admissions" class="block py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200">Admissions</a>
-            <a href="#faculty" class="block py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200">Faculty</a>
-            <a href="#contact" class="block py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200">Contact Us</a>
+            <a href="#about" class="block py-2 px-4 rounded-lg hover:bg-blue-600">About Us</a>
+            <a href="#programs" class="block py-2 px-4 rounded-lg hover:bg-blue-600">Programs</a>
+            <a href="#admissions" class="block py-2 px-4 rounded-lg hover:bg-blue-600">Admissions</a>
+            <a href="#faculty" class="block py-2 px-4 rounded-lg hover:bg-blue-600">Faculty</a>
+            <a href="#contact" class="block py-2 px-4 rounded-lg hover:bg-blue-600">Contact Us</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
 
-        <!-- About Us Section -->
         <section id="about" class="bg-white rounded-xl shadow-md p-6 mb-8 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
             <div class="md:w-1/2">
                 <h2 class="text-3xl font-bold mb-4 text-blue-800">About Us</h2>
@@ -75,100 +67,59 @@
             </div>
         </section>
 
-        <!-- Programs Section -->
         <section id="programs" class="bg-white rounded-xl shadow-md p-6 mb-8">
             <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Our Academic Programs</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Program 1 -->
                 <div class="bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGQkVqZ0TId8kFO9y8-HR-CM14OSAPRzwpCg&s" alt="Computer Science" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <h3 class="text-xl font-semibold mb-2 text-green-700">Computer Science</h3>
-                    <p class="text-gray-600 text-sm">
-                        Explore the fundamentals of computing and cutting-edge technologies. Our curriculum is designed to prepare students for the ever-evolving tech industry.
-                    </p>
+                    <p class="text-gray-600 text-sm">Explore the fundamentals of computing and cutting-edge technologies.</p>
                 </div>
-                <!-- Program 2 -->
                 <div class="bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR87dJQ9IHRtgHwy7EtkQXVr_XZI6xF8yeFmw&s" alt="Electrical Engineering" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <h3 class="text-xl font-semibold mb-2 text-blue-700">Electrical Engineering</h3>
-                    <p class="text-gray-600 text-sm">
-                        Dive into the world of electronics, power systems, and telecommunications with hands-on projects and expert faculty.
-                    </p>
+                    <p class="text-gray-600 text-sm">Dive into the world of electronics and power systems.</p>
                 </div>
-                <!-- Program 3 -->
                 <div class="bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS56MDxBzOZRZwlw0uL0f61obPJhqv0EB7bhg&s" alt="Civil Engineering" class="rounded-lg mb-4 w-full h-48 object-cover">
                     <h3 class="text-xl font-semibold mb-2 text-red-700">Material Engineering</h3>
-                    <p class="text-gray-600 text-sm">
-                        Build the future with a focus on infrastructure, design, and sustainable development.
-                    </p>
+                    <p class="text-gray-600 text-sm">Build the future with a focus on infrastructure and design.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Admissions Section -->
-        <section id="admissions" class="bg-white rounded-xl shadow-md p-6 mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-center text-blue-800">Admissions</h2>
-            <p class="text-center text-gray-600 mb-6">
-                Ready to take the next step? Find all the information you need to apply to our university.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                <div class="w-full md:w-1/3 text-center bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h4 class="text-lg font-semibold mb-2">Application Process</h4>
-                    <p class="text-sm text-gray-600">
-                        Learn about the required documents and steps to submit your application.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/3 text-center bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h4 class="text-lg font-semibold mb-2">Scholarships</h4>
-                    <p class="text-sm text-gray-600">
-                        Explore our various scholarships and financial aid options.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/3 text-center bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h4 class="text-lg font-semibold mb-2">Deadlines</h4>
-                    <p class="text-sm text-gray-600">
-                        Check the key dates and deadlines for the upcoming academic year.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Faculty Section -->
         <section id="faculty" class="bg-white rounded-xl shadow-md p-6 mb-8">
             <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Meet Our Faculty</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Faculty Card 1 -->
                 <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Fazil Wahid.jpg" alt="Dr. Jane Doe" class="rounded-full mb-4 w-32 h-32 object-cover">
+                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Fazil Wahid.jpg" alt="Dr. Fazil Wahid" class="rounded-full mb-4 w-32 h-32 object-cover">
                     <h4 class="font-semibold text-lg text-blue-800">Dr Fazil Wahid</h4>
                     <p class="text-sm text-gray-600">Professor of Computer Science</p>
                 </div>
-                <!-- Faculty Card 2 -->
                 <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Muhammad Aamir.jpg" alt="Dr. John Smith" class="rounded-full mb-4 w-32 h-32 object-cover">
-                    <h4 class="font-semibold text-lg text-blue-800">Dr. Muhammad AAmir</h4>
+                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Muhammad Aamir.jpg" alt="Dr. Muhammad Aamir" class="rounded-full mb-4 w-32 h-32 object-cover">
+                    <h4 class="font-semibold text-lg text-blue-800">Dr. Muhammad Aamir</h4>
                     <p class="text-sm text-gray-600">Professor of Electrical Engineering</p>
                 </div>
-                <!-- Faculty Card 3 -->
                 <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Zahid Ullah.jpg" alt="Dr. Sarah Lee" class="rounded-full mb-4 w-32 h-32 object-cover">
+                    <img src="d:\6th Semester University\1 Summer Semester 2025\DSA\Assignment\Dr Zahid Ullah.jpg" alt="Dr. Zahid Ullah" class="rounded-full mb-4 w-32 h-32 object-cover">
                     <h4 class="font-semibold text-lg text-blue-800">Dr. Zahid Ullah</h4>
                     <p class="text-sm text-gray-600">Professor of Civil Engineering</p>
                 </div>
-                <!-- Faculty Card 4 -->
                 <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdDW8v5gWhb8WcQf45lB8dZX0ZP5SzHYSadg&s" alt="Dr. Mark Miller" class="rounded-full mb-4 w-32 h-32 object-cover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdDW8v5gWhb8WcQf45lB8dZX0ZP5SzHYSadg&s" alt="Dr. Sohail Malik" class="rounded-full mb-4 w-32 h-32 object-cover">
                     <h4 class="font-semibold text-lg text-blue-800">Dr. Sohail Malik</h4>
                     <p class="text-sm text-gray-600">Professor of Business</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Us Section -->
         <section id="contact" class="bg-white rounded-xl shadow-md p-6 mb-8">
             <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Contact Us</h2>
+            
             <form id="contactForm" class="max-w-xl mx-auto space-y-4">
+                <input type="hidden" name="access_key" value="cb3e133b-4164-4238-b1ad-38334cf7e6e7">
+
                 <div>
                     <label for="name" class="block text-gray-700">Name</label>
                     <input type="text" id="name" name="name" required
@@ -197,34 +148,25 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer class="bg-blue-900 text-white py-6 text-center">
         <p class="text-sm">&copy; 2024 PAF-IAST. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for form validation and mobile menu -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu Toggle
+            // Mobile Menu
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Form Validation
+            // AJAX Form Submission
             const contactForm = document.getElementById('contactForm');
             const formStatus = document.getElementById('form-status');
 
             contactForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent form from submitting
-
-                // Reset error messages
-                document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
-                document.querySelectorAll('.form-input').forEach(el => el.classList.remove('invalid'));
-                formStatus.textContent = '';
-
+                event.preventDefault();
+                
+                // Basic Validation Logic
                 let isValid = true;
                 const name = document.getElementById('name');
                 const email = document.getElementById('email');
@@ -235,35 +177,34 @@
                     document.getElementById('name-error').style.display = 'block';
                     isValid = false;
                 }
-
-                if (email.value.trim() === '') {
+                if (!email.value.includes('@')) {
                     email.classList.add('invalid');
                     document.getElementById('email-error').style.display = 'block';
-                    isValid = false;
-                } else if (!email.value.includes('@') || !email.value.includes('.')) {
-                    email.classList.add('invalid');
-                    document.getElementById('email-error').textContent = 'Please enter a valid email address.';
-                    document.getElementById('email-error').style.display = 'block';
-                    isValid = false;
-                }
-
-                if (message.value.trim() === '') {
-                    message.classList.add('invalid');
-                    document.getElementById('message-error').style.display = 'block';
                     isValid = false;
                 }
 
                 if (isValid) {
-                    // This is where a real-world application would send data to a server
-                    // using fetch() or another method.
-                    formStatus.textContent = 'Form submitted successfully! (No email was sent as a backend is required)';
-                    formStatus.classList.remove('text-red-500');
-                    formStatus.classList.add('text-green-500');
-                    contactForm.reset();
-                } else {
-                    formStatus.textContent = 'Please correct the errors above.';
-                    formStatus.classList.remove('text-green-500');
-                    formStatus.classList.add('text-red-500');
+                    formStatus.textContent = "Sending...";
+                    const formData = new FormData(contactForm);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        if (response.status == 200) {
+                            formStatus.innerHTML = '<span class="text-green-500">Success! Email sent to the owner.</span>';
+                            contactForm.reset();
+                        } else {
+                            formStatus.innerHTML = '<span class="text-red-500">Submission failed. Check your API Key.</span>';
+                        }
+                    })
+                    .catch(error => {
+                        formStatus.innerHTML = '<span class="text-red-500">Error connecting to server.</span>';
+                    });
                 }
             });
         });
